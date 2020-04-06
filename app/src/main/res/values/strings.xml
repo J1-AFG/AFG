@@ -1,3 +1,13 @@
 <resources>
     <string name="app_name">AFG</string>
+    <string name="welcomeStr">Welcome to (APP NAME)</string>
+    <string name="descStr1">This app will use your inputted info to track your mood.</string>
+    <string name="descStr2">To get started, please select which features you would like to track.</string>
+    <string name="locationStr">Location</string>
+    <string name="activityStr">Activities</string>
+    <string name="companyStr">Who you are with</string>
+    <string name="sleepStr">Amount of sleep</string>
+    <string name="customFeatureStr">Add custom feature</string>
+    <string name="continueStr">Continue</string>
+    <string name="customFeatureHintStr">Enter custom feature</string>
 </resources>
