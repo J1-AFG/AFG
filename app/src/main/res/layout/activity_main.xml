@@ -13,12 +13,10 @@
         android:layout_height="wrap_content"
         android:text="@string/activityStr"
         android:textAlignment="center"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/descText2"
-        app:layout_constraintVertical_bias="0.143" />
+        app:layout_constraintBottom_toTopOf="@+id/companyBox"
+        app:layout_constraintStart_toStartOf="@+id/locationBox"
+        app:layout_constraintTop_toBottomOf="@+id/locationBox"
+        app:layout_constraintVertical_bias="0.157" />
 
     <CheckBox
         android:id="@+id/companyBox"
@@ -26,12 +24,10 @@
         android:layout_height="wrap_content"
         android:text="@string/companyStr"
         android:textAlignment="center"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/descText2"
-        app:layout_constraintVertical_bias="0.219" />
+        app:layout_constraintBottom_toTopOf="@+id/sleepBox"
+        app:layout_constraintStart_toStartOf="@+id/activityBox"
+        app:layout_constraintTop_toBottomOf="@+id/activityBox"
+        app:layout_constraintVertical_bias="0.249" />
 
     <CheckBox
         android:id="@+id/sleepBox"
@@ -39,12 +35,10 @@
         android:layout_height="wrap_content"
         android:text="@string/sleepStr"
         android:textAlignment="center"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/descText2"
-        app:layout_constraintVertical_bias="0.296" />
+        app:layout_constraintBottom_toTopOf="@+id/customFeature"
+        app:layout_constraintStart_toStartOf="@+id/companyBox"
+        app:layout_constraintTop_toBottomOf="@+id/companyBox"
+        app:layout_constraintVertical_bias="0.339" />
 
     <TextView
         android:id="@+id/welcomeText"
@@ -61,45 +55,46 @@
         app:layout_constraintVertical_bias="0.007" />
 
     <TextView
-        android:id="@+id/descText1"
+        android:id="@+id/welcomeDescText1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
-        android:text="@string/descStr1"
+        android:text="@string/welcomeDescStr1"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/welcomeText" />
 
     <TextView
-        android:id="@+id/descText2"
+        android:id="@+id/welcomeDescText2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
-        android:text="@string/descStr2"
+        android:text="@string/welcomeDescStr2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/descText1" />
+        app:layout_constraintTop_toBottomOf="@+id/welcomeDescText1" />
 
     <CheckBox
         android:id="@+id/locationBox"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="50dp"
         android:text="@string/locationStr"
         android:textAlignment="center"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintBottom_toTopOf="@+id/activityBox"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/descText2"
-        app:layout_constraintVertical_bias="0.064" />
+        app:layout_constraintTop_toBottomOf="@+id/welcomeDescText2"
+        app:layout_constraintVertical_bias="0.066" />
 
     <TextView
         android:id="@+id/customFeatureText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/customFeatureStr"
-        tools:layout_editor_absoluteX="8dp"
-        tools:layout_editor_absoluteY="391dp" />
+        app:layout_constraintEnd_toStartOf="@+id/customFeature"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="468dp" />
 
     <EditText
         android:id="@+id/customFeature"
@@ -108,17 +103,23 @@
         android:ems="10"
         android:hint="@string/customFeatureHintStr"
         android:inputType="textPersonName"
-        tools:layout_editor_absoluteX="137dp"
-        tools:layout_editor_absoluteY="378dp" />
-
-    <Button
-        android:id="@+id/continueButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/continueStr"
+        app:layout_constraintBottom_toBottomOf="@+id/customFeatureText"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/customFeatureText"
+        app:layout_constraintTop_toTopOf="@+id/customFeatureText"
+        android:autofillHints="" />
+
+    <Button
+        android:id="@+id/welcomeContinueButton"
+        android:layout_width="155dp"
+        android:layout_height="100dp"
+        android:layout_marginBottom="70dp"
+        android:text="@string/continueStr"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="568dp" />
+        app:layout_constraintTop_toBottomOf="@+id/customFeature"
+        app:layout_constraintVertical_bias="1.0" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
