@@ -10,11 +10,13 @@
         android:id="@+id/timesContinueButton"
         android:layout_width="155dp"
         android:layout_height="100dp"
+        android:layout_marginTop="324dp"
         android:layout_marginBottom="70dp"
         android:text="@string/continueStr"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/morningDropdown" />
 
     <TextView
         android:id="@+id/timesDescText1"
