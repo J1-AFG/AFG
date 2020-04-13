@@ -86,29 +86,17 @@
         app:layout_constraintTop_toBottomOf="@+id/welcomeDescText2"
         app:layout_constraintVertical_bias="0.066" />
 
-    <TextView
-        android:id="@+id/customFeatureText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/customFeatureStr"
-        app:layout_constraintEnd_toStartOf="@+id/customFeature"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="468dp" />
-
     <EditText
         android:id="@+id/customFeature"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginEnd="148dp"
+        android:autofillHints=""
         android:ems="10"
         android:hint="@string/customFeatureHintStr"
         android:inputType="textPersonName"
-        app:layout_constraintBottom_toBottomOf="@+id/customFeatureText"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/customFeatureText"
-        app:layout_constraintTop_toTopOf="@+id/customFeatureText"
-        android:autofillHints="" />
+        tools:layout_editor_absoluteY="452dp" />
 
     <Button
         android:id="@+id/welcomeContinueButton"
