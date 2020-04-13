@@ -9,7 +9,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Times"></activity>
+        <activity android:name=".location"></activity>
+        <activity android:name=".activities" />
+        <activity android:name=".people" />
+        <activity android:name=".Times" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
