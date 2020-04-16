@@ -30,7 +30,7 @@
     <string name="restaurantStr">Restaurant</string>
     <string name="libraryStr">Library</string>
     <string name="customPlaceStr">Add custom location</string>
-    <string name="testStr">Test</string>
+    <string name="testStr">Test </string>
 
 
     <string name="timesDescStr1">The app will ask you to make an entry three times a day. Please provide a range of times to
