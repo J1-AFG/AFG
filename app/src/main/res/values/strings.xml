@@ -10,9 +10,30 @@
     <string name="customFeatureStr">Add custom feature</string>
     <string name="continueStr">Continue</string>
     <string name="customFeatureHintStr">Enter custom feature</string>
+    <string name="peopleStr">Who are you with?</string>
+    <string name="parentStr">Parent</string>
+    <string name="siblingStr">Sibling</string>
+    <string name="teacherStr">Teacher</string>
+    <string name="friendStr">Friend</string>
+    <string name="customPersonStr">Add custom person</string>
+    <string name="activitiesStr">What are you doing?</string>
+    <string name="eatingStr">Eating</string>
+    <string name="workingStr">Working</string>
+    <string name="sportStr">Playing a sport</string>
+    <string name="tvStr">Watching TV</string>
+    <string name="friendsStr">Hanging out with friends</string>
+    <string name="customActivityStr">Add custom activity</string>
+    <string name="placeStr">Where are you?</string>
+    <string name="homeStr">Home</string>
+    <string name="workStr">Work</string>
+    <string name="schoolStr">School</string>
+    <string name="restaurantStr">Restaurant</string>
+    <string name="libraryStr">Library</string>
+    <string name="customPlaceStr">Add custom location</string>
+
     <string name="timesDescStr1">The app will ask you to make an entry three times a day. Please provide a range of times to
     be notified in the morning, afternoon, and evening.</string>
-    
+
     <string-array name="morningTimes">
         <item> 12:00 AM</item>
         <item> 1:00 AM</item>
