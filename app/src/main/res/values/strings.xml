@@ -33,6 +33,7 @@
 
     <string name="timesDescStr1">The app will ask you to make an entry three times a day. Please provide a range of times to
     be notified in the morning, afternoon, and evening.</string>
+    <string name="addButtonStr">ADD</string>
 
     <string-array name="morningTimes">
         <item> 12:00 AM</item>
@@ -63,4 +64,11 @@
         <item> 10:00 PM</item>
         <item> 11:00 PM</item>
     </string-array>
+
+    <string name="locationBox">com.example.afg.locationBox</string>
+    <string name="activityBox">com.example.afg.activityBox</string>
+    <string name="companyBox">com.example.afg.companyBox</string>
+    <string name="sleepBox">com.example.afg.sleepBox</string>
+    <string name="customFeature">com.example.afg.customFeature</string>
+
 </resources>

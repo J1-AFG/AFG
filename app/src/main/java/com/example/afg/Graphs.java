@@ -22,7 +22,7 @@ public class Graphs extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.graphs);
-        createGraph(ENTRIES_VAR_NAME)
+        createGraph(Algorithm.getEntries())
 
 
     }

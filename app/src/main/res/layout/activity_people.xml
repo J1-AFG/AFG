@@ -5,7 +5,7 @@
     android:id="@+id/peopleLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".people">
+    tools:context=".People">
 
     <TextView
         android:id="@+id/peopleDesc"
