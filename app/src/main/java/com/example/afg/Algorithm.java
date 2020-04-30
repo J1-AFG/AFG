@@ -1,3 +1,4 @@
+/*
 package com.example.afg;
 
 import java.util.ArrayList;
@@ -40,7 +41,7 @@ public class Algorithm {
         entries.add(entry);
     }
 
-    public ArrayList<Entry> getEntries () {
+    public static ArrayList<Entry> getEntries() {
         return entries;
     }
 
@@ -110,7 +111,6 @@ public class Algorithm {
      mean = mean / e.size();
      return mean;
      }
-     **/
 
     public String calculateANOVA(ArrayList<Entry> e) {
         ArrayList<String> time = new ArrayList<String>();
@@ -195,11 +195,11 @@ public class Algorithm {
      double angryMorningMean = getMean(makeMorningArray(makeAngryArray(e)));
      double angryAfternoonMean = getMean(makeAfternoonArray(makeAngryArray(e)));
      double angryEveningMean = getMean(makeEveningArray(makeAngryArray(e)));
-     **/
+
 
 
 
 
 }
-
+*/
 

@@ -1,3 +1,4 @@
+/*
 package com.example.afg;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -5,11 +6,10 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 
 import android.graphics.Color;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 
 import com.github.mikephil.charting.charts.LineChart;
-import com.github.mikephil.charting.data.Entry;
 import com.github.mikephil.charting.data.LineData;
 import com.github.mikephil.charting.data.LineDataSet;
 import com.github.mikephil.charting.interfaces.datasets.ILineDataSet;
@@ -22,6 +22,7 @@ public class Graphs extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.graphs);
+        Algorithm algorithm = new Algorithm();
         createGraph(Algorithm.getEntries());
 
 
@@ -43,9 +44,9 @@ public class Graphs extends AppCompatActivity {
             yAXISsin.add(new Entry(xEntry, sinFunction));
             yAXIScos.add(new Entry(xEntry, cosFunction));
 
-            Log.d(TAG, "Populating Arrays with Data: yAXISsin = " + sinFunction);
-            Log.d(TAG, "Populating Arrays with Data: yAXIScos = " + cosFunction);
-            Log.d(TAG, "Populating Arrays with Data: xEntry = " + xEntry);
+            Log.d("TAG", "Populating Arrays with Data: yAXISsin = " + sinFunction);
+            Log.d("TAG", "Populating Arrays with Data: yAXIScos = " + cosFunction);
+            Log.d("TAG", "Populating Arrays with Data: xEntry = " + xEntry);
 
         }
         ArrayList<ILineDataSet> lineDataSets = new ArrayList<>();
@@ -66,3 +67,4 @@ public class Graphs extends AppCompatActivity {
         lineChart.invalidate();
     }
 }
+*/
