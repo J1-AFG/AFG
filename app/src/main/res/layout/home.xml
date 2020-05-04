@@ -7,162 +7,107 @@
     android:layout_height="match_parent">
 
     <TextView
-        android:id="@+id/homeTextStr"
+        android:id="@+id/homeTextStr5"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="25dp"
+        android:layout_marginStart="104dp"
+        android:layout_marginBottom="596dp"
         android:text="@string/homeTextStr"
         android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toEndOf="@+id/chartsTextStr" />
+
+    <TextView
+        android:id="@+id/homeTextStr"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="85dp"
+        android:layout_marginBottom="16dp"
+        android:text="@string/homeTextStr"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/chartsTextStr" />
 
     <TextView
         android:id="@+id/goalsTextStr"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="60dp"
-        android:layout_marginEnd="158dp"
-        android:layout_marginBottom="25dp"
+        android:layout_marginEnd="75dp"
+        android:layout_marginBottom="16dp"
         android:text="@string/goalsTextStr"
         android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/homeTextStr" />
+        app:layout_constraintEnd_toStartOf="@+id/settingsTextStr" />
 
     <TextView
         android:id="@+id/settingsTextStr"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="50dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginBottom="25dp"
+        android:layout_marginEnd="65dp"
+        android:layout_marginBottom="16dp"
         android:text="@string/settingsTextStr"
         android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/goalsTextStr" />
+        app:layout_constraintEnd_toEndOf="parent" />
 
     <TextView
         android:id="@+id/chartsTextStr"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="60dp"
-        android:layout_marginBottom="25dp"
+        android:layout_marginStart="69dp"
+        android:layout_marginBottom="16dp"
         android:text="@string/chartsTextStr"
         android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/homeTextStr" />
+        app:layout_constraintStart_toStartOf="parent" />
 
     <ImageButton
         android:id="@+id/homeButton"
         android:layout_width="100dp"
         android:layout_height="100dp"
-        android:layout_marginBottom="10dp"
+        android:layout_marginEnd="45dp"
+        android:layout_marginBottom="16dp"
         android:contentDescription="@string/homeStr"
-        app:layout_constraintBottom_toTopOf="@+id/homeTextStr"
+        android:onClick="openActivitySettingz"
+        app:layout_constraintBottom_toTopOf="@+id/settingsTextStr"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@drawable/ic_launcher_foreground" />
+        app:srcCompat="@android:drawable/btn_dialog" />
 
     <ImageButton
         android:id="@+id/goalsButton"
         android:layout_width="100dp"
         android:layout_height="100dp"
-        android:layout_marginStart="15dp"
-        android:layout_marginBottom="10dp"
+        android:layout_marginStart="35dp"
+        android:layout_marginBottom="16dp"
         android:contentDescription="@string/goalsTextStr"
-        app:layout_constraintBottom_toTopOf="@+id/goalsTextStr"
-        app:layout_constraintEnd_toStartOf="@+id/settingsButton"
-        app:layout_constraintStart_toEndOf="@+id/homeButton"
-        app:srcCompat="@drawable/ic_launcher_foreground" />
+        android:onClick="openActivityHomie"
+        app:layout_constraintBottom_toTopOf="@+id/homeTextStr"
+        app:layout_constraintStart_toEndOf="@+id/chartsButton"
+        app:srcCompat="@android:drawable/btn_dialog" />
 
     <ImageButton
         android:id="@+id/settingsButton"
         android:layout_width="100dp"
         android:layout_height="100dp"
-        android:layout_marginStart="15dp"
-        android:layout_marginEnd="15dp"
-        android:layout_marginBottom="10dp"
+        android:layout_marginEnd="35dp"
+        android:layout_marginBottom="16dp"
         android:contentDescription="@string/settingsTextStr"
-        app:layout_constraintBottom_toTopOf="@+id/settingsTextStr"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/goalsButton"
-        app:srcCompat="@drawable/ic_launcher_foreground" />
+        android:onClick="openActivityGoalz"
+        app:layout_constraintBottom_toTopOf="@+id/goalsTextStr"
+        app:layout_constraintEnd_toStartOf="@+id/homeButton"
+        app:srcCompat="@android:drawable/btn_dialog" />
 
     <ImageButton
         android:id="@+id/chartsButton"
         android:layout_width="100dp"
         android:layout_height="100dp"
-        android:layout_marginEnd="15dp"
-        android:layout_marginBottom="10dp"
+        android:layout_marginStart="45dp"
+        android:layout_marginBottom="16dp"
         android:contentDescription="@string/chartsTextStr"
-        android:onClick="openActivity"
+        android:onClick="openActivityGraphz"
         app:layout_constraintBottom_toTopOf="@+id/chartsTextStr"
-        app:layout_constraintEnd_toStartOf="@+id/homeButton"
-        app:srcCompat="@drawable/ic_launcher_foreground" />
-
-    <ScrollView
-        android:layout_width="583dp"
-        android:layout_height="709dp"
-        android:layout_marginTop="75dp"
-        android:layout_marginBottom="10dp"
-        app:layout_constraintBottom_toTopOf="@+id/homeButton"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:srcCompat="@android:drawable/btn_dialog" />
 
-        <LinearLayout
-            android:id="@+id/linearLayout"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical" >
-
-            <TextView
-                android:id="@+id/textView14"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="TextView"
-                android:textSize="100sp" />
-
-            <TextView
-                android:id="@+id/textView13"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="TextView"
-                android:textSize="100sp" />
-
-            <TextView
-                android:id="@+id/textView12"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="TextView"
-                android:textSize="100sp" />
-
-            <TextView
-                android:id="@+id/textView11"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="TextView"
-                android:textSize="100sp" />
-
-            <TextView
-                android:id="@+id/textView10"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="TextView"
-                android:textSize="100sp" />
-
-            <TextView
-                android:id="@+id/textView9"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="TextView"
-                android:textSize="100sp" />
-
-        </LinearLayout>
-    </ScrollView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

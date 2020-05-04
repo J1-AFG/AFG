@@ -1,13 +1,15 @@
-/*
+
 package com.example.afg;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import android.graphics.Color;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
 
 import com.github.mikephil.charting.charts.LineChart;
 import com.github.mikephil.charting.data.LineData;
@@ -22,12 +24,49 @@ public class Graphs extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.graphs);
-        Algorithm algorithm = new Algorithm();
-        createGraph(Algorithm.getEntries());
-
 
     }
 
+    public void openActivity(View v) {
+        openActivityHome();
+    }
+
+    public void openActivityGraphz(View v) {
+        openActivityGraphs();
+    }
+    public void openActivityGraphs() {
+        Intent intent = new Intent(this, Graphs.class);
+        startActivity(intent);
+    }
+
+
+    public void openActivityGoalz(View v) {
+        openActivityGoals();
+    }
+    public void openActivityGoals() {
+        Intent intent = new Intent(this, Goals.class);
+        startActivity(intent);
+    }
+
+
+    public void openActivitySettingz(View v) {
+        openActivitySettings();
+    }
+    public void openActivitySettings() {
+        Intent intent = new Intent(this, Settings.class);
+        startActivity(intent);
+    }
+
+    public void openActivityHomie(View v) {
+        openActivityHome();
+    }
+    public void openActivityHome() {
+        Intent intent = new Intent(this, Home.class);
+        startActivity(intent);
+    }
+}
+
+    /*
     public void createGraph(ArrayList<Entry> e){
         LineChart lineChart;
         lineChart = (LineChart) findViewById(R.id.lineChart);

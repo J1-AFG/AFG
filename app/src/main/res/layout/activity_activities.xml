@@ -109,6 +109,7 @@
         android:layout_marginTop="39dp"
         android:layout_marginEnd="160dp"
         android:layout_marginBottom="31dp"
+        android:onClick="openActivity"
         android:text="@string/continueStr"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

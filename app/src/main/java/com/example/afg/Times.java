@@ -2,7 +2,9 @@ package com.example.afg;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Spinner;
 
@@ -24,6 +26,15 @@ public class Times extends AppCompatActivity {
         ArrayAdapter<CharSequence> eveningAdapter = ArrayAdapter.createFromResource(this, R.array.eveningTimes, android.R.layout.simple_spinner_item);
         eveningAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spinner2.setAdapter(eveningAdapter);
+    }
+
+    public void openActivity(View v) {
+        openActivityHome();
+    }
+
+    public void openActivityHome() {
+        Intent intent = new Intent(this, Activities.class);
+        startActivity(intent);
     }
     }
 
