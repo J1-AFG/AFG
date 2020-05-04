@@ -33,6 +33,11 @@
     <string name="homeTextStr">Home</string>
     <string name="goalsTextStr">Goals</string>
     <string name="settingsTextStr">Settings</string>
+    <string name="chartsTextStr">Charts</string>
+    <string name="emotionsStr">Which emotions would you like to track?</string>
+    <string name="happyStr">Happy</string>
+    <string name="sadStr">Sad</string>
+    <string name="angryStr">Which emotions would you like to track?</string>
     <string name="chartsTextStr">Graphs</string>
 
 

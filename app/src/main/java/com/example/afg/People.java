@@ -11,7 +11,7 @@ public class People extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_people);
+        setContentView(R.layout.activity_emotions);
     }
 
     public void openActivity(View v) {
