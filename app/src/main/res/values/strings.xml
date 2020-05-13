@@ -37,8 +37,9 @@
     <string name="emotionsStr">Which emotions would you like to track?</string>
     <string name="happyStr">Happy</string>
     <string name="sadStr">Sad</string>
-    <string name="angryStr">Which emotions would you like to track?</string>
-    <string name="chartsTextStr">Graphs</string>
+    <string name="angryStr">Angry</string>
+    <string name="stressStr">Stress</string>
+    <string name="graphsTextStr">Graphs</string>
 
 
     <string name="timesDescStr1">The app will ask you to make an entry three times a day. Please provide a range of times to
@@ -79,6 +80,10 @@
     <string name="activityBox">com.example.afg.activityBox</string>
     <string name="companyBox">com.example.afg.companyBox</string>
     <string name="sleepBox">com.example.afg.sleepBox</string>
-    <string name="customFeature">com.example.afg.customFeature</string>
 
+    <string name="happyBox">com.example.afg.happyBox</string>
+    <string name="sadBox">com.example.afg.sadBox</string>
+    <string name="angryBox">com.example.afg.angryBox</string>
+    <string name="stressBox">com.example.afg.stressBox</string>
+    <string name="otherBox">com.example.afg.otherBox</string>
 </resources>

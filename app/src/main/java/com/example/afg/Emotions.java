@@ -16,7 +16,7 @@ public class Emotions extends AppCompatActivity {
     private CheckBox sadBox;
     private CheckBox angryBox;
     private CheckBox stressBox;
-    private EditText customEmotion;
+    private CheckBox otherBox;
     private Button addButton;
     private Button emotionsContinueButton;
     SharedPreferences Preferences = PreferenceManager.getDefaultSharedPreferences(this);
@@ -29,21 +29,12 @@ public class Emotions extends AppCompatActivity {
         sadBox = (CheckBox) findViewById(R.id.sadBox);
         angryBox = (CheckBox) findViewById(R.id.angryBox);
         stressBox = (CheckBox) findViewById(R.id.stressBox);
-        customEmotion = (EditText) findViewById(R.id.customEmotion);
+        //customEmotion = (EditText) findViewById(R.id.customEmotion);
+        otherBox = (CheckBox) findViewById(R.id.otherBox);
         addButton = (Button) findViewById(R.id.addButton);
         emotionsContinueButton = (Button) findViewById(R.id.emotionsContinueButton);
 
 
-
-
-        addButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                String custEmotion = customEmotion.getText().toString();
-                Editor.putString(getString(R.string.customEmotion), custEmotion);
-                Editor.commit();
-            }
-        });
 
         emotionsContinueButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -59,6 +50,9 @@ public class Emotions extends AppCompatActivity {
                 }
                 if (stressBox.isChecked()) {
                     Editor.putBoolean(getString(R.string.stressBox), true);
+                }
+                if (otherBox.isChecked()) {
+                    Editor.putBoolean(getString(R.string.otherBox), true);
                 }
                 Editor.commit();
                 goToActivities(view);

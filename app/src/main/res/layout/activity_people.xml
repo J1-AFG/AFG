@@ -20,7 +20,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <CheckBox
-        android:id="@+id/parent"
+        android:id="@+id/parentBox"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="100dp"
@@ -44,7 +44,7 @@
         app:layout_constraintBottom_toTopOf="@+id/friend"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/parent" />
+        app:layout_constraintTop_toBottomOf="@+id/parentBox" />
 
     <CheckBox
         android:id="@+id/friend"
