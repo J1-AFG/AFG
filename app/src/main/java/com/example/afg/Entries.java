@@ -22,7 +22,7 @@ public class Entries extends AppCompatActivity {
     private CheckBox stressBox;
     private CheckBox otherBox;
     private Button addButton;
-    private Button welcomeContinueButton;
+    private Button entriesContinueButton;
     private ArrayList<String> entriesArray = new ArrayList<String>();
     SharedPreferences Preferences = PreferenceManager.getDefaultSharedPreferences(this);
     SharedPreferences.Editor Editor = Preferences.edit();
