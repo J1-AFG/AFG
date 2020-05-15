@@ -7,66 +7,63 @@
     android:layout_height="match_parent"
     tools:context=".Emotions">
 
-    <RadioGroup
-        android:layout_width="408dp"
-        android:layout_height="535dp"
-        android:layout_marginStart="107dp"
-        android:layout_marginTop="30dp"
+
+    <CheckBox
+        android:id="@+id/sadBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/sadStr"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/angryBox"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/emotionsDesc">
+        app:layout_constraintTop_toBottomOf="@+id/happyBox" />
 
-        <RadioButton
-            android:id="@+id/sadBox"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="150dp"
-            android:layout_marginEnd="100dp"
-            android:layout_marginBottom="75dp"
-            android:text="@string/sadStr"
-            android:textSize="18sp" />
+    <CheckBox
+        android:id="@+id/angryBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/angryStr"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/stressBox"
+        app:layout_constraintEnd_toEndOf="@+id/sadBox"
+        app:layout_constraintStart_toStartOf="@+id/sadBox"
+        app:layout_constraintTop_toBottomOf="@+id/sadBox" />
 
-        <RadioButton
-            android:id="@+id/friend"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="150dp"
-            android:layout_marginEnd="100dp"
-            android:layout_marginBottom="75dp"
-            android:text="@string/friendStr"
-            android:textSize="18sp" />
+    <CheckBox
+        android:id="@+id/happyBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/happyStr"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/sadBox"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/emotionsDesc" />
 
-        <RadioButton
-            android:id="@+id/happyBox"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="150dp"
-            android:layout_marginTop="0dp"
-            android:layout_marginEnd="100dp"
-            android:layout_marginBottom="75dp"
-            android:text="@string/happyStr"
-            android:textSize="18sp" />
+    <CheckBox
+        android:id="@+id/stressBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/stressStr"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/otherBox"
+        app:layout_constraintEnd_toEndOf="@+id/angryBox"
+        app:layout_constraintStart_toStartOf="@+id/angryBox"
+        app:layout_constraintTop_toBottomOf="@+id/angryBox" />
 
-        <RadioButton
-            android:id="@+id/teacher"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="150dp"
-            android:layout_marginEnd="100dp"
-            android:layout_marginBottom="75dp"
-            android:text="@string/teacherStr"
-            android:textSize="18sp" />
-
-        <RadioButton
-            android:id="@+id/other"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="150dp"
-            android:layout_marginEnd="100dp"
-            android:layout_marginBottom="75dp"
-            android:text="@string/otherStr"
-            android:textSize="18sp" />
-
-    </RadioGroup>
+    <CheckBox
+        android:id="@+id/otherBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/otherStr"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/next"
+        app:layout_constraintEnd_toEndOf="@+id/stressBox"
+        app:layout_constraintStart_toStartOf="@+id/stressBox"
+        app:layout_constraintTop_toBottomOf="@+id/stressBox" />
 
     <TextView
         android:id="@+id/emotionsDesc"
@@ -88,8 +85,9 @@
         android:onClick="goToActivities"
         android:text="@string/continueStr"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/otherBox"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="@+id/otherBox"
+        app:layout_constraintTop_toBottomOf="@+id/otherBox" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

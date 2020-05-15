@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.os.Environment;
 import android.preference.PreferenceManager;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
@@ -11,6 +12,10 @@ import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.Spinner;
 
+import java.io.BufferedWriter;
+import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
@@ -21,6 +26,7 @@ public class Entries extends AppCompatActivity {
     private CheckBox angryBox;
     private CheckBox stressBox;
     private CheckBox otherBox;
+    private EditText ratingEditText;
     private Button addButton;
     private Button entriesContinueButton;
     private ArrayList<String> entriesArray = new ArrayList<String>();
@@ -31,7 +37,14 @@ public class Entries extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_entries);
-
+        /**
+        happyBox = (CheckBox)findViewById(R.id.happyBox);
+        sadBox = (CheckBox)findViewById(R.id.sadBox);
+        angryBox = (CheckBox)findViewById(R.id.angryBox);
+        stressBox = (CheckBox)findViewById(R.id.stressBox);
+        otherBox = (CheckBox)findViewById(R.id.otherBox);
+        rating = (EditText) findViewById(R.id.ratingEditText);
+         **/
         if (Preferences.getBoolean(getString(R.string.happyBox),false)){
             entriesArray.add("Happy");
         }
@@ -54,9 +67,29 @@ public class Entries extends AppCompatActivity {
 
         String emotion = entriesSpinner.getSelectedItem().toString();
 
+
         Date today = new Date();
-        SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd hh:mm:ss a");
+        SimpleDateFormat format = new SimpleDateFormat("hh:mm:ss a");
         String dateToStr = format.format(today);
+
+        String fileName = "entriesData";
+
+        try {
+            String content = "This is test content";
+            File file = new File(fileName +".csv");
+            // if file doesnt exists, then create it
+            if (!file.exists()) {
+                file.createNewFile();
+            }
+
+            FileWriter fw = new FileWriter(file.getAbsoluteFile());
+            BufferedWriter bw = new BufferedWriter(fw);
+            bw.write(content);
+            bw.close();
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
 

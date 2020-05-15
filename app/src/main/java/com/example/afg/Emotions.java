@@ -11,8 +11,9 @@ import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
 
-/*
+
 public class Emotions extends AppCompatActivity {
+    /*
     private CheckBox happyBox;
     private CheckBox sadBox;
     private CheckBox angryBox;
@@ -65,6 +66,8 @@ public class Emotions extends AppCompatActivity {
                 Intent intent = new Intent(this, Activities.class);
                 startActivity(intent);
             }
+
+     */
     }
-*/
+
 
