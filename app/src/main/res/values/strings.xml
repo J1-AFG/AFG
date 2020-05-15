@@ -42,6 +42,7 @@
     <string name="stressStr">Stress</string>
     <string name="graphsTextStr">Graphs</string>
     <string name="SummaryText1Str">Text</string>
+    <string name="EntryTextStr">Please select the emotion you are feeling right now.</string>
 
 
     <string name="timesDescStr1">The app will ask you to make an entry three times a day. Please provide a range of times to
