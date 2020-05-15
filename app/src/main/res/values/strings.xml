@@ -78,6 +78,10 @@
         <item> 11:00 PM</item>
     </string-array>
 
+    <string-array name="entriesArray">
+
+    </string-array>
+
     <string name="locationBox">com.example.afg.locationBox</string>
     <string name="activityBox">com.example.afg.activityBox</string>
     <string name="companyBox">com.example.afg.companyBox</string>

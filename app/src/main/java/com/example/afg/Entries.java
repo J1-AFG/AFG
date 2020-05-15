@@ -26,7 +26,7 @@ public class Entries extends AppCompatActivity {
     private ArrayList<String> entriesArray = new ArrayList<String>();
     SharedPreferences Preferences = PreferenceManager.getDefaultSharedPreferences(this);
     SharedPreferences.Editor Editor = Preferences.edit();
-    /*
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -59,5 +59,5 @@ public class Entries extends AppCompatActivity {
         String dateToStr = format.format(today);
     }
 
-     */
+
 }
