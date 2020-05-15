@@ -7,9 +7,10 @@
     <string name="activityStr">Activities</string>
     <string name="companyStr">Who you are with</string>
     <string name="sleepStr">Amount of sleep</string>
-    <string name="customFeatureStr">Add custom feature</string>
+    <string name="otherStr">Other</string>
     <string name="continueStr">Continue</string>
     <string name="customFeatureHintStr">Enter custom feature</string>
+    <string name="customFeatureStr">Enter custom feature</string>
     <string name="peopleStr">Who are you with?</string>
     <string name="parentStr">Parent</string>
     <string name="siblingStr">Sibling</string>
@@ -40,6 +41,7 @@
     <string name="angryStr">Angry</string>
     <string name="stressStr">Stress</string>
     <string name="graphsTextStr">Graphs</string>
+    <string name="SummaryText1Str">Text</string>
 
 
     <string name="timesDescStr1">The app will ask you to make an entry three times a day. Please provide a range of times to

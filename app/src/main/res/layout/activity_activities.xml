@@ -18,101 +18,87 @@
         app:layout_constraintTop_toTopOf="parent"
         tools:layout_editor_absoluteX="147dp" />
 
-    <CheckBox
-        android:id="@+id/eating"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="100dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="100dp"
-        android:layout_marginBottom="40dp"
-        android:text="@string/eatingStr"
-        app:layout_constraintBottom_toTopOf="@+id/working"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/activityDesc" />
-
-    <CheckBox
-        android:id="@+id/working"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="100dp"
-        android:layout_marginEnd="100dp"
-        android:layout_marginBottom="40dp"
-        android:text="@string/workingStr"
-        app:layout_constraintBottom_toTopOf="@+id/friends"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/eating" />
-
-    <CheckBox
-        android:id="@+id/friends"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="100dp"
-        android:layout_marginEnd="100dp"
-        android:layout_marginBottom="40dp"
-        android:text="@string/friendsStr"
-        app:layout_constraintBottom_toTopOf="@+id/sport"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/working" />
-
-    <CheckBox
-        android:id="@+id/sport"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="100dp"
-        android:layout_marginEnd="100dp"
-        android:layout_marginBottom="40dp"
-        android:text="@string/sportStr"
-        app:layout_constraintBottom_toTopOf="@+id/tv"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/friends" />
-
-    <CheckBox
-        android:id="@+id/tv"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="100dp"
-        android:layout_marginEnd="100dp"
-        android:layout_marginBottom="40dp"
-        android:text="@string/tvStr"
-        app:layout_constraintBottom_toTopOf="@+id/customActivity"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/sport" />
-
-    <EditText
-        android:id="@+id/customActivity"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="100dp"
-        android:layout_marginEnd="100dp"
-        android:layout_marginBottom="100dp"
-        android:autofillHints=""
-        android:ems="10"
-        android:hint="@string/customFeatureHintStr"
-        android:inputType="textPersonName"
-        android:text="@string/customActivityStr"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv" />
-
     <Button
         android:id="@+id/next"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="160dp"
-        android:layout_marginTop="39dp"
         android:layout_marginEnd="160dp"
         android:layout_marginBottom="31dp"
         android:onClick="openActivity"
         android:text="@string/continueStr"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <RadioGroup
+        android:layout_width="324dp"
+        android:layout_height="732dp"
+        android:layout_marginStart="142dp"
+        android:layout_marginTop="48dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/customActivity" />
+        app:layout_constraintTop_toBottomOf="@+id/activityDesc">
+
+        <RadioButton
+            android:id="@+id/working"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="50dp"
+            android:layout_marginEnd="100dp"
+            android:layout_marginBottom="75dp"
+            android:text="@string/workingStr"
+            android:textSize="18sp" />
+
+        <RadioButton
+            android:id="@+id/tv"
+            android:layout_width="169dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="50dp"
+            android:layout_marginEnd="100dp"
+            android:layout_marginBottom="75dp"
+            android:text="@string/tvStr"
+            android:textSize="18sp" />
+
+        <RadioButton
+            android:id="@+id/eating"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="50dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="100dp"
+            android:layout_marginBottom="75dp"
+            android:text="@string/eatingStr"
+            android:textSize="18sp" />
+
+        <RadioButton
+            android:id="@+id/sport"
+            android:layout_width="181dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="50dp"
+            android:layout_marginEnd="100dp"
+            android:layout_marginBottom="75dp"
+            android:text="@string/sportStr"
+            android:textSize="18sp" />
+
+        <RadioButton
+            android:id="@+id/friends"
+            android:layout_width="254dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="50dp"
+            android:layout_marginEnd="100dp"
+            android:layout_marginBottom="75dp"
+            android:text="@string/friendsStr"
+            android:textSize="18sp" />
+
+        <RadioButton
+            android:id="@+id/other"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="50dp"
+            android:layout_marginEnd="100dp"
+            android:layout_marginBottom="75dp"
+            android:textSize="18sp"
+            android:text="@string/otherStr" />
+    </RadioGroup>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

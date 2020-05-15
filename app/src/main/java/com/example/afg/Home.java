@@ -7,6 +7,8 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
+import android.widget.EditText;
 
 public class Home extends AppCompatActivity {
 
@@ -15,7 +17,12 @@ public class Home extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.home);
 
+        TextView summaryText = findViewById(R.id.SummaryTextStr);
+        String Summary1VariableStr = "-VARIABLE-";
+        String Summary1MoodStr = "-MOOD-";
+        summaryText.setText("It seems like " + Summary1VariableStr + " is affecting your " + Summary1MoodStr);
     }
+
     public void openActivityGraphz(View v) {
         openActivityGraphs();
     }

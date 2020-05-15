@@ -7,6 +7,67 @@
     android:layout_height="match_parent"
     tools:context=".Emotions">
 
+    <RadioGroup
+        android:layout_width="408dp"
+        android:layout_height="535dp"
+        android:layout_marginStart="107dp"
+        android:layout_marginTop="30dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/emotionsDesc">
+
+        <RadioButton
+            android:id="@+id/sadBox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="150dp"
+            android:layout_marginEnd="100dp"
+            android:layout_marginBottom="75dp"
+            android:text="@string/sadStr"
+            android:textSize="18sp" />
+
+        <RadioButton
+            android:id="@+id/friend"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="150dp"
+            android:layout_marginEnd="100dp"
+            android:layout_marginBottom="75dp"
+            android:text="@string/friendStr"
+            android:textSize="18sp" />
+
+        <RadioButton
+            android:id="@+id/happyBox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="150dp"
+            android:layout_marginTop="0dp"
+            android:layout_marginEnd="100dp"
+            android:layout_marginBottom="75dp"
+            android:text="@string/happyStr"
+            android:textSize="18sp" />
+
+        <RadioButton
+            android:id="@+id/teacher"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="150dp"
+            android:layout_marginEnd="100dp"
+            android:layout_marginBottom="75dp"
+            android:text="@string/teacherStr"
+            android:textSize="18sp" />
+
+        <RadioButton
+            android:id="@+id/other"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="150dp"
+            android:layout_marginEnd="100dp"
+            android:layout_marginBottom="75dp"
+            android:text="@string/otherStr"
+            android:textSize="18sp" />
+
+    </RadioGroup>
+
     <TextView
         android:id="@+id/emotionsDesc"
         android:layout_width="match_parent"
@@ -19,88 +80,16 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <CheckBox
-        android:id="@+id/happyBox"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="100dp"
-        android:layout_marginTop="62dp"
-        android:layout_marginEnd="100dp"
-        android:layout_marginBottom="40dp"
-        android:text="@string/happyStr"
-        app:layout_constraintBottom_toTopOf="@+id/sadBox"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/emotionsDesc" />
-
-    <CheckBox
-        android:id="@+id/sadBox"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="100dp"
-        android:layout_marginEnd="100dp"
-        android:layout_marginBottom="40dp"
-        android:text="@string/sadStr"
-        app:layout_constraintBottom_toTopOf="@+id/friend"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/happyBox" />
-
-    <CheckBox
-        android:id="@+id/friend"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="100dp"
-        android:layout_marginEnd="100dp"
-        android:layout_marginBottom="40dp"
-        android:text="@string/friendStr"
-        app:layout_constraintBottom_toTopOf="@+id/teacher"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/sadBox" />
-
-    <CheckBox
-        android:id="@+id/teacher"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="100dp"
-        android:layout_marginEnd="100dp"
-        android:layout_marginBottom="40dp"
-        android:text="@string/teacherStr"
-        app:layout_constraintBottom_toTopOf="@+id/editText"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/friend" />
-
-    <EditText
-        android:id="@+id/editText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="100dp"
-        android:layout_marginTop="40dp"
-        android:layout_marginEnd="100dp"
-        android:ems="10"
-        android:hint="@string/customFeatureHintStr"
-        android:inputType="textPersonName"
-        android:text="@string/customPersonStr"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/teacher"
-        android:autofillHints="" />
-
     <Button
         android:id="@+id/next"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="160dp"
-        android:layout_marginTop="80dp"
-        android:layout_marginEnd="160dp"
-        android:layout_marginBottom="126dp"
+        android:layout_marginBottom="143dp"
         android:onClick="goToActivities"
         android:text="@string/continueStr"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editText" />
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

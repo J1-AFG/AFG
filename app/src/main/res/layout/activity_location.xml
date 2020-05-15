@@ -12,95 +12,11 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="46dp"
-        android:layout_marginBottom="75dp"
         android:text="@string/placeStr"
         android:textAlignment="center"
         android:textSize="24sp"
-        app:layout_constraintBottom_toTopOf="@+id/home"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:layout_editor_absoluteX="171dp" />
-
-    <CheckBox
-        android:id="@+id/home"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="100dp"
-        android:layout_marginEnd="100dp"
-        android:layout_marginBottom="40dp"
-        android:text="@string/homeStr"
-        app:layout_constraintBottom_toTopOf="@+id/work"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/place" />
-
-    <CheckBox
-        android:id="@+id/work"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="100dp"
-        android:layout_marginEnd="100dp"
-        android:layout_marginBottom="40dp"
-        android:text="@string/workStr"
-        app:layout_constraintBottom_toTopOf="@+id/school"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/home" />
-
-    <CheckBox
-        android:id="@+id/school"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="100dp"
-        android:layout_marginEnd="100dp"
-        android:layout_marginBottom="40dp"
-        android:text="@string/schoolStr"
-        app:layout_constraintBottom_toTopOf="@+id/library"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/work" />
-
-    <CheckBox
-        android:id="@+id/library"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="100dp"
-        android:layout_marginEnd="100dp"
-        android:layout_marginBottom="40dp"
-        android:text="@string/libraryStr"
-        app:layout_constraintBottom_toTopOf="@+id/restaurant"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/school" />
-
-    <CheckBox
-        android:id="@+id/restaurant"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="100dp"
-        android:layout_marginEnd="100dp"
-        android:layout_marginBottom="40dp"
-        android:text="@string/restaurantStr"
-        app:layout_constraintBottom_toTopOf="@+id/customLocation"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/library" />
-
-    <EditText
-        android:id="@+id/customLocation"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="100dp"
-        android:layout_marginEnd="100dp"
-        android:layout_marginBottom="40dp"
-        android:autofillHints=""
-        android:ems="10"
-        android:hint="@string/customFeatureHintStr"
-        android:inputType="textPersonName"
-        android:text="@string/customPlaceStr"
-        app:layout_constraintBottom_toTopOf="@id/restaurant"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/restaurant" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/next"
@@ -113,6 +29,76 @@
         android:text="@string/continueStr"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <RadioGroup
+        android:layout_width="397dp"
+        android:layout_height="663dp"
+        android:layout_marginStart="107dp"
+        android:layout_marginTop="69dp"
+        android:layout_marginEnd="96dp"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/customLocation" />
+        app:layout_constraintTop_toBottomOf="@+id/place" >
+
+        <RadioButton
+            android:id="@+id/home"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="100dp"
+            android:layout_marginEnd="100dp"
+            android:layout_marginBottom="75dp"
+            android:textSize="18sp"
+            android:text="@string/homeStr" />
+
+        <RadioButton
+            android:id="@+id/library"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="100dp"
+            android:layout_marginEnd="100dp"
+            android:layout_marginBottom="75dp"
+            android:textSize="18sp"
+            android:text="@string/libraryStr" />
+
+        <RadioButton
+            android:id="@+id/school"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="100dp"
+            android:layout_marginEnd="100dp"
+            android:layout_marginBottom="75dp"
+            android:textSize="18sp"
+            android:text="@string/schoolStr" />
+
+        <RadioButton
+            android:id="@+id/work"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="100dp"
+            android:layout_marginEnd="100dp"
+            android:layout_marginBottom="75dp"
+            android:textSize="18sp"
+            android:text="@string/workStr" />
+
+        <RadioButton
+            android:id="@+id/restaurant"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="100dp"
+            android:layout_marginEnd="100dp"
+            android:layout_marginBottom="75dp"
+            android:textSize="18sp"
+            android:text="@string/restaurantStr" />
+
+        <RadioButton
+            android:id="@+id/other"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="100dp"
+            android:layout_marginEnd="100dp"
+            android:layout_marginBottom="75dp"
+            android:text="@string/otherStr"
+            android:textSize="18sp" />
+    </RadioGroup>
 </androidx.constraintlayout.widget.ConstraintLayout>
