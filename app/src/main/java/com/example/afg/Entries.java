@@ -30,13 +30,14 @@ public class Entries extends AppCompatActivity {
     private Button addButton;
     private Button entriesContinueButton;
     private ArrayList<String> entriesArray = new ArrayList<String>();
-    SharedPreferences Preferences = PreferenceManager.getDefaultSharedPreferences(this);
-    SharedPreferences.Editor Editor = Preferences.edit();
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_entries);
+        SharedPreferences Preferences = PreferenceManager.getDefaultSharedPreferences(this);
+        SharedPreferences.Editor Editor = Preferences.edit();
         /**
         happyBox = (CheckBox)findViewById(R.id.happyBox);
         sadBox = (CheckBox)findViewById(R.id.sadBox);

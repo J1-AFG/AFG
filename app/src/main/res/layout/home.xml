@@ -62,50 +62,55 @@
         app:layout_constraintStart_toStartOf="parent" />
 
     <ImageButton
-        android:id="@+id/homeButton"
+        android:id="@+id/settingsButton"
         android:layout_width="100dp"
         android:layout_height="100dp"
-        android:layout_marginEnd="45dp"
-        android:layout_marginBottom="16dp"
-        android:contentDescription="@string/homeStr"
+
+        android:contentDescription="@string/settingsTextStr"
         android:onClick="openActivitySettingz"
         app:layout_constraintBottom_toTopOf="@+id/settingsTextStr"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/goalsButton"
+        app:srcCompat="@android:drawable/btn_dialog" />
+
+    <ImageButton
+        android:id="@+id/homeButton"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+
+        android:contentDescription="@string/homeTextStr"
+        android:onClick="openActivityHomie"
+        app:layout_constraintBottom_toTopOf="@+id/homeTextStr"
+        app:layout_constraintEnd_toStartOf="@+id/goalsButton"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/chartsButton"
         app:srcCompat="@android:drawable/btn_dialog" />
 
     <ImageButton
         android:id="@+id/goalsButton"
         android:layout_width="100dp"
         android:layout_height="100dp"
-        android:layout_marginStart="35dp"
-        android:layout_marginBottom="16dp"
-        android:contentDescription="@string/goalsTextStr"
-        android:onClick="openActivityHomie"
-        app:layout_constraintBottom_toTopOf="@+id/homeTextStr"
-        app:layout_constraintStart_toEndOf="@+id/chartsButton"
-        app:srcCompat="@android:drawable/btn_dialog" />
 
-    <ImageButton
-        android:id="@+id/settingsButton"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:layout_marginEnd="35dp"
-        android:layout_marginBottom="16dp"
-        android:contentDescription="@string/settingsTextStr"
+
+        android:contentDescription="@string/goalsTextStr"
         android:onClick="openActivityGoalz"
         app:layout_constraintBottom_toTopOf="@+id/goalsTextStr"
-        app:layout_constraintEnd_toStartOf="@+id/homeButton"
+        app:layout_constraintEnd_toStartOf="@+id/settingsButton"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/homeButton"
         app:srcCompat="@android:drawable/btn_dialog" />
 
     <ImageButton
         android:id="@+id/chartsButton"
         android:layout_width="100dp"
         android:layout_height="100dp"
-        android:layout_marginStart="45dp"
-        android:layout_marginBottom="16dp"
+
         android:contentDescription="@string/chartsTextStr"
         android:onClick="openActivityGraphz"
         app:layout_constraintBottom_toTopOf="@+id/chartsTextStr"
+        app:layout_constraintEnd_toStartOf="@+id/homeButton"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:srcCompat="@android:drawable/btn_dialog" />
 

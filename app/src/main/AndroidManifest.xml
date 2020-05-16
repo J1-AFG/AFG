@@ -12,7 +12,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".Times"></activity>
-        <activity android:name=".Entries" />
+        <activity android:name=".Home" />
         <activity android:name=".Graphs" />
         <activity android:name=".Activities" />
         <activity android:name=".People" />
@@ -20,7 +20,8 @@
         <activity android:name=".Goals" />
         <activity android:name=".Settings" />
         <activity android:name=".MainActivity"/>
-        <activity android:name=".Home">
+        <activity android:name=".Entries"/>
+        <activity android:name=".Emotions">
 
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

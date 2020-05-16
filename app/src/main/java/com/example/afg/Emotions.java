@@ -13,7 +13,7 @@ import android.widget.EditText;
 
 
 public class Emotions extends AppCompatActivity {
-    /*
+
     private CheckBox happyBox;
     private CheckBox sadBox;
     private CheckBox angryBox;
@@ -21,12 +21,14 @@ public class Emotions extends AppCompatActivity {
     private CheckBox otherBox;
     private Button addButton;
     private Button emotionsContinueButton;
-    SharedPreferences Preferences = PreferenceManager.getDefaultSharedPreferences(this);
-    SharedPreferences.Editor Editor = Preferences.edit();
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_emotions);
+
+        final SharedPreferences Preferences = PreferenceManager.getDefaultSharedPreferences(this);
+
         happyBox = (CheckBox) findViewById(R.id.happyBox);
         sadBox = (CheckBox) findViewById(R.id.sadBox);
         angryBox = (CheckBox) findViewById(R.id.angryBox);
@@ -34,13 +36,15 @@ public class Emotions extends AppCompatActivity {
         //customEmotion = (EditText) findViewById(R.id.customEmotion);
         otherBox = (CheckBox) findViewById(R.id.otherBox);
         addButton = (Button) findViewById(R.id.addButton);
-        emotionsContinueButton = (Button) findViewById(R.id.emotionsContinueButton);
+        emotionsContinueButton = (Button) findViewById(R.id.next);
 
 
 
         emotionsContinueButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+
+                SharedPreferences.Editor Editor = Preferences.edit();
                 if (happyBox.isChecked()) {
                     Editor.putBoolean(getString(R.string.happyBox), true);
                 }
@@ -57,17 +61,23 @@ public class Emotions extends AppCompatActivity {
                     Editor.putBoolean(getString(R.string.otherBox), true);
                 }
                 Editor.commit();
-                goToActivities(view);
+
+                openTimes(view);
             }
         });
     }
 
-            public void goToActivities (View view){
-                Intent intent = new Intent(this, Activities.class);
-                startActivity(intent);
-            }
 
-     */
+    public void openTimes(View v) {
+        openTimesHome();
+    }
+
+    public void openTimesHome() {
+        Intent intent = new Intent(this, Times.class);
+        startActivity(intent);
+    }
+
+
     }
 
 
