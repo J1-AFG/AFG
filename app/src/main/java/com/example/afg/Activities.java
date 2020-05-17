@@ -14,10 +14,17 @@ public class Activities extends AppCompatActivity {
         setContentView(R.layout.activity_activities);
     }
 
+    /**
+     * Opens the People activity
+     * @param v - view
+     */
     public void openActivity(View v) {
         openActivityPeople();
     }
 
+    /**
+     * Opens the People activity
+     */
     public void openActivityPeople() {
         Intent intent = new Intent(this, People.class);
         startActivity(intent);

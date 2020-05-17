@@ -13,6 +13,9 @@ import android.widget.Spinner;
 public class Times extends AppCompatActivity {
 
     @Override
+    /**
+     * Creates and populates spinners with ranges of times for the user to receive notifications
+     */
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.times);
@@ -27,7 +30,10 @@ public class Times extends AppCompatActivity {
         eveningAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spinner2.setAdapter(eveningAdapter);
     }
-
+    /**
+     * Opens the Home activity
+     * @param v - view
+     */
     public void openActivity(View v) {
         openActivityHome();
     }

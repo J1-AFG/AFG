@@ -23,6 +23,9 @@ public class Emotions extends AppCompatActivity {
     private Button emotionsContinueButton;
 
     @Override
+    /**
+     * Defines initialized data
+     */
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_emotions);
@@ -41,11 +44,17 @@ public class Emotions extends AppCompatActivity {
     }
 
 
-
+    /**
+     * Opens Times activity and saves checked boxes to SharedPreferences
+     * @param v - view
+     */
     public void openTimes(View v) {
         openTimesHome();
     }
 
+    /**
+     * Opens Times activity and saves checked boxes to SharedPreferences
+     */
     public void openTimesHome() {
         SharedPreferences Preferences = PreferenceManager.getDefaultSharedPreferences(this);
         SharedPreferences.Editor Editor = Preferences.edit();

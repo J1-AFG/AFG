@@ -19,25 +19,51 @@ public class Algorithm {
     private Date night;
 
     //constructors
+
+    /**
+     * Constructs a default Algorithm that takes no input
+     * @throws IOException
+     */
     public Algorithm() throws IOException {
         entries = new ArrayList<Entry>();
     }
 
+    /**
+     * Constructs an Algorithm that takes an ArrayList of Entry objects as input
+     * @param e - an ArrayList of Entry objects
+     * @throws IOException
+     */
     public Algorithm(ArrayList<Entry> e) throws IOException {
         entries = e;
     }
 
     //methods
 
-    public void addEntry(String time, int rate, String feel) {
-        Entry entry = new Entry(time, rate, feel);
+    /**
+     * Adds an Entry to an ArrayList of Entry objects
+     * @param time - the time at which the entry was created
+     * @param rate - the rating of the feeling
+     * @param feel - the feeling
+     */
+    public void addEntry(String feel, int rate, String time) {
+        Entry entry = new Entry(feel, rate, time);
         entries.add(entry);
     }
 
+    /**
+     * gets the ArrayList of entries
+     * @return the ArrayList of entries
+     */
     public ArrayList<Entry> getEntries() {
         return entries;
     }
 
+    /**
+     * Determines if there is a significant difference between the ratings of emotions based on time of day
+     * @param e - ArrayList of all Entry objects
+     * @return true if there is a significant difference between the ratings of emotions based on time of day, false otherwise
+     * @throws ParseException
+     */
     public boolean calculateANOVA(ArrayList<Entry> e) throws ParseException {
         SimpleDateFormat sdf = new SimpleDateFormat( "hh:mm:ss a");
         morning = sdf.parse("4:00:00 AM");
@@ -104,22 +130,32 @@ public class Algorithm {
             return false/*"There is no significant difference between the ratings of the " + feel.get(0) + " emotion."*/;
     }
 
-    public static double returnAverage(ArrayList<Integer> time) {
+    /**
+     * computes the average of ratings of the entries
+     * @param rate - an ArrayList containing ratings from the entries
+     * @return the average of ratings of the entries
+     */
+    public static double returnAverage(ArrayList<Integer> rate) {
         double average = 0;
-        for (int i = 0; i < time.size(); i++) {
-            average = average + time.get(i);
+        for (int i = 0; i < rate.size(); i++) {
+            average = average + rate.get(i);
         }
-        return average / time.size();
+        return average / rate.size();
     }
 
-    public static double returnWeirdThing(ArrayList<Integer> time) {
+    /**
+     * returns a (weird) double needed for the ANOVA test
+     * @param rate - an ArrayList containing ratings from the entries
+     * @return a double needed for the ANOVA test
+     */
+    public static double returnWeirdThing(ArrayList<Integer> rate) {
         ArrayList<Double> time2 = new ArrayList<Double>();
-        for (int i = 0; i < time.size(); i++) {
-            time2.add(Math.pow(time.get(i) - returnAverage(time), 2));
+        for (int i = 0; i < rate.size(); i++) {
+            time2.add(Math.pow(rate.get(i) - returnAverage(rate), 2));
         }
 
         double sum = 0;
-        for (int i = 0; i < time.size(); i++) {
+        for (int i = 0; i < rate.size(); i++) {
             sum = sum + time2.get(i);
         }
         return sum;

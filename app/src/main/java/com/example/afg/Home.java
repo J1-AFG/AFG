@@ -30,6 +30,9 @@ import java.util.Date;
 public class Home extends AppCompatActivity {
     TextView summaryTextStr;
     @Override
+    /**
+     * Initializes the display text
+     */
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.home);
@@ -49,6 +52,9 @@ public class Home extends AppCompatActivity {
 
     }
     @Override
+    /**
+     * Rereads the CSV to accept any new changes
+     */
     protected void onResume() {
         super.onResume();
         try {
@@ -61,7 +67,10 @@ public class Home extends AppCompatActivity {
             e.printStackTrace();
         }
     }
-
+    /**
+     * Opens the Graphs activity
+     * @param v - view
+     */
     public void openActivityGraphz(View v) {
         openActivityGraphs();
     }
@@ -70,7 +79,10 @@ public class Home extends AppCompatActivity {
         startActivity(intent);
     }
 
-
+    /**
+     * Opens the Goals activity
+     * @param v - view
+     */
     public void openActivityGoalz(View v) {
         openActivityGoals();
     }
@@ -79,7 +91,10 @@ public class Home extends AppCompatActivity {
         startActivity(intent);
     }
 
-
+    /**
+     * Opens the Settings activity
+     * @param v - view
+     */
     public void openActivitySettingz(View v) {
         openActivitySettings();
     }
@@ -87,14 +102,10 @@ public class Home extends AppCompatActivity {
         Intent intent = new Intent(this, Settings.class);
         startActivity(intent);
     }
-
-    public void openActivityHomie(View v) {
-        openActivityHome();
-    }
-    public void openActivityHome() {
-        Intent intent = new Intent(this, Home.class);
-        startActivity(intent);
-    }
+    /**
+     * Opens the Entries activity
+     * @param v - view
+     */
     public void openActivityEntriez(View v) {
         openActivityEntries();
     }
@@ -102,6 +113,15 @@ public class Home extends AppCompatActivity {
         Intent intent = new Intent(this, Entries.class);
         startActivity(intent);
     }
+
+    /**
+     * Reads the CSV data, stores that data in one Entry Arraylist,
+     * splits that data based on emotion and stores it in separate ArrayLists,
+     * updates the display text to show which emotions show significant differences.
+     * @throws IOException
+     * @throws CsvValidationException
+     * @throws ParseException
+     */
     public void readFromCSV() throws IOException, CsvValidationException, ParseException {
         Entry e = new Entry();
         ArrayList<Entry> elist = new ArrayList<Entry>();

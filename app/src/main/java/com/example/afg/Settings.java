@@ -14,6 +14,10 @@ public class Settings extends AppCompatActivity {
         setContentView(R.layout.settings);
 
     }
+    /**
+     * Opens the Graphs activity
+     * @param v - view
+     */
     public void openActivityGraphz(View v) {
         openActivityGraphs();
     }
@@ -22,7 +26,10 @@ public class Settings extends AppCompatActivity {
         startActivity(intent);
     }
 
-
+    /**
+     * Opens the Goals activity
+     * @param v - view
+     */
     public void openActivityGoalz(View v) {
         openActivityGoals();
     }
@@ -31,7 +38,10 @@ public class Settings extends AppCompatActivity {
         startActivity(intent);
     }
 
-
+    /**
+     * Opens the Settings activity
+     * @param v - view
+     */
     public void openActivitySettingz(View v) {
         openActivitySettings();
     }
@@ -39,7 +49,10 @@ public class Settings extends AppCompatActivity {
         Intent intent = new Intent(this, Settings.class);
         startActivity(intent);
     }
-
+    /**
+     * Opens the Home activity
+     * @param v - view
+     */
     public void openActivityHomie(View v) {
         openActivityHome();
     }

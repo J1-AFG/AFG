@@ -14,6 +14,10 @@ public class People extends AppCompatActivity {
         setContentView(R.layout.activity_people);
     }
 
+    /**
+     * Opens the Location activity
+     * @param v - view
+     */
     public void openActivity(View v) {
         openActivityLocation();
     }

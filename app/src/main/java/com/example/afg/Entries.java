@@ -39,6 +39,9 @@ public class Entries extends AppCompatActivity {
     private File entriesData;
 
     @Override
+    /**
+     * Defines initialized data and populates spinner by pulling from SharedPreferences
+     */
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_entries);
@@ -83,10 +86,21 @@ public class Entries extends AppCompatActivity {
         entriesSpinner.setAdapter(entriesAdapter);
 
     }
+
+    /**
+     * Runs the printToCSV method
+     * @param v - view
+     * @throws IOException
+     */
     public void csv (View v) throws IOException {
         printToCSV();
     }
-    //CSV writer code retrieved from https://www.topjavatutorial.com/
+    //CSV writer code retrieved from https://stackoverflow.com/
+
+    /**
+     * Appends an entry to the entriesData CSV, and displays what was appended in the Log (for debugging)
+     * @throws IOException
+     */
         public void printToCSV() throws IOException {
             String emotion = entriesSpinner.getSelectedItem().toString();
 

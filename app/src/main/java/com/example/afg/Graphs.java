@@ -19,10 +19,11 @@ public class Graphs extends AppCompatActivity {
 
     }
 
-    public void openActivity(View v) {
-        openActivityHome();
-    }
 
+    /**
+     * Opens the Graphs activity
+     * @param v - view
+     */
     public void openActivityGraphz(View v) {
         openActivityGraphs();
     }
@@ -31,7 +32,10 @@ public class Graphs extends AppCompatActivity {
         startActivity(intent);
     }
 
-
+    /**
+     * Opens the Goals activity
+     * @param v - view
+     */
     public void openActivityGoalz(View v) {
         openActivityGoals();
     }
@@ -40,7 +44,10 @@ public class Graphs extends AppCompatActivity {
         startActivity(intent);
     }
 
-
+    /**
+     * Opens the Settings activity
+     * @param v - view
+     */
     public void openActivitySettingz(View v) {
         openActivitySettings();
     }
@@ -48,7 +55,10 @@ public class Graphs extends AppCompatActivity {
         Intent intent = new Intent(this, Settings.class);
         startActivity(intent);
     }
-
+    /**
+     * Opens the Home activity
+     * @param v - view
+     */
     public void openActivityHomie(View v) {
         openActivityHome();
     }

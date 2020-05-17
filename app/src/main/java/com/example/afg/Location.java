@@ -14,6 +14,10 @@ public class Location extends AppCompatActivity {
         setContentView(R.layout.activity_location);
     }
 
+    /**
+     * Opens the Times activity
+     * @param v - view
+     */
     public void openActivity(View v) {
         openActivityTimes();
     }
