@@ -3,7 +3,6 @@ package com.example.afg;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
-
 import android.Manifest;
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -14,19 +13,13 @@ import android.preference.PreferenceManager;
 import android.util.Log;
 import android.view.View;
 import android.widget.ArrayAdapter;
-import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.Spinner;
-
-import com.opencsv.CSVWriter;
-
 import java.io.BufferedWriter;
 import java.io.File;
-import java.io.FileNotFoundException;
 import java.io.FileWriter;
 import java.io.IOException;
-import java.io.PrintWriter;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
@@ -44,8 +37,7 @@ public class Entries extends AppCompatActivity {
     private String dir;
     private String filename;
     private File entriesData;
-   // private PrintWriter pw;
-   // private CSVWriter csvWriter;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -68,20 +60,7 @@ public class Entries extends AppCompatActivity {
                      new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE},
                      1);
          }
-/**
-        try {
-            pw = new PrintWriter(entriesData);
 
-            StringBuffer csvHeader = new StringBuffer("");
-            csvHeader.append("Emotion,Rating,Timestamp\n");
-            // write header
-            pw.append(csvHeader.toString());
-            //pw.close();
-        } catch (FileNotFoundException e) {
-
-            e.printStackTrace();
-        }
-**/
         if (Preferences.getBoolean(getString(R.string.happyBox), false)) {
             entriesArray.add("Happy");
         }
@@ -103,8 +82,6 @@ public class Entries extends AppCompatActivity {
         entriesAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         entriesSpinner.setAdapter(entriesAdapter);
 
-
-
     }
     public void csv (View v) throws IOException {
         printToCSV();
@@ -113,18 +90,6 @@ public class Entries extends AppCompatActivity {
         public void printToCSV() throws IOException {
             String emotion = entriesSpinner.getSelectedItem().toString();
 
-            /**
-
-             File path = Environment.getExternalStorageDirectory();
-
-             File curDir = new File(path.getAbsolutePath()+"/AFG");
-             if(!curDir.exists()){
-             curDir.mkdirs();
-             }
-
-             File entriesData = new File(curDir+"/entriesData");
-             entriesData.createNewFile();
-             **/
             String rating = ratingEditText.getText().toString();
             int rate = Integer.parseInt(rating);
 
@@ -136,25 +101,7 @@ public class Entries extends AppCompatActivity {
             BufferedWriter bw = new BufferedWriter(fw);
             bw.write(emotion+","+rate+","+dateToStr+'\n');
             bw.close();
-/**
-            try {
-                pw = new PrintWriter(entriesData);
-                StringBuffer csvData = new StringBuffer("");
-                // write data
-                csvData.append(emotion);
-                csvData.append(',');
-                csvData.append(rating);
-                csvData.append(',');
-                csvData.append(dateToStr);
-                csvData.append('\n');
-                pw.append(csvData.toString());
 
-                //pw.close();
-            } catch (FileNotFoundException e) {
-
-                e.printStackTrace();
-            }
- **/
             }
 
 
@@ -168,26 +115,3 @@ public class Entries extends AppCompatActivity {
     }
     }
 
-/**
-        try {
-            String content = "This is test content";
-            File file = new File(fileName +".csv");
-            // if file doesnt exists, then create it
-            if (!file.exists()) {
-                file.createNewFile();
-            }
-
-            FileWriter fw = new FileWriter(file.getAbsoluteFile());
-            BufferedWriter bw = new BufferedWriter(fw);
-            bw.write(content);
-            bw.close();
-
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-
-    }
-
-
-}
- **/

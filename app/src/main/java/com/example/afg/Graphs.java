@@ -6,17 +6,9 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 
-import android.graphics.Color;
-import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 
-import com.github.mikephil.charting.charts.LineChart;
-import com.github.mikephil.charting.data.LineData;
-import com.github.mikephil.charting.data.LineDataSet;
-import com.github.mikephil.charting.interfaces.datasets.ILineDataSet;
 
-import java.util.ArrayList;
 
 public class Graphs extends AppCompatActivity {
 
