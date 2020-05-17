@@ -21,14 +21,14 @@ public class Graphs extends AppCompatActivity {
 
 
     /**
-     * Opens the Graphs activity
+     * Opens the Entries activity
      * @param v - view
      */
-    public void openActivityGraphz(View v) {
-        openActivityGraphs();
+    public void openActivityEntriez(View v) {
+        openActivityEntries();
     }
-    public void openActivityGraphs() {
-        Intent intent = new Intent(this, Graphs.class);
+    public void openActivityEntries() {
+        Intent intent = new Intent(this, Entries.class);
         startActivity(intent);
     }
 
