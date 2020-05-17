@@ -39,14 +39,14 @@ public class Settings extends AppCompatActivity {
     }
 
     /**
-     * Opens the Settings activity
+     * Opens the Entries activity
      * @param v - view
      */
-    public void openActivitySettingz(View v) {
-        openActivitySettings();
+    public void openActivityEntriez(View v) {
+        openActivityEntries();
     }
-    public void openActivitySettings() {
-        Intent intent = new Intent(this, Settings.class);
+    public void openActivityEntries() {
+        Intent intent = new Intent(this, Entries.class);
         startActivity(intent);
     }
     /**

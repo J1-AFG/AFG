@@ -26,7 +26,7 @@
         android:text="@string/homeTextStr"
         android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/chartsTextStr" />
+        app:layout_constraintStart_toEndOf="@+id/entriesTextStr" />
 
     <TextView
         android:id="@+id/goalsTextStr"
@@ -51,12 +51,12 @@
         app:layout_constraintEnd_toEndOf="parent" />
 
     <TextView
-        android:id="@+id/chartsTextStr"
+        android:id="@+id/entriesTextStr"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="69dp"
         android:layout_marginBottom="16dp"
-        android:text="@string/chartsTextStr"
+        android:text="@string/entriesStr"
         android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
@@ -82,7 +82,7 @@
         android:contentDescription="@string/goalsTextStr"
         android:onClick="openActivityHomie"
         app:layout_constraintBottom_toTopOf="@+id/homeTextStr"
-        app:layout_constraintStart_toEndOf="@+id/chartsButton"
+        app:layout_constraintStart_toEndOf="@+id/entriesButton"
         app:srcCompat="@android:drawable/btn_dialog" />
 
     <ImageButton
@@ -98,14 +98,14 @@
         app:srcCompat="@android:drawable/btn_dialog" />
 
     <ImageButton
-        android:id="@+id/chartsButton"
+        android:id="@+id/entriesButton"
         android:layout_width="100dp"
         android:layout_height="100dp"
         android:layout_marginStart="45dp"
         android:layout_marginBottom="16dp"
         android:contentDescription="@string/chartsTextStr"
-        android:onClick="openActivityGraphz"
-        app:layout_constraintBottom_toTopOf="@+id/chartsTextStr"
+        android:onClick="openActivityEntriez"
+        app:layout_constraintBottom_toTopOf="@+id/entriesTextStr"
         app:layout_constraintStart_toStartOf="parent"
         app:srcCompat="@android:drawable/btn_dialog" />
 
