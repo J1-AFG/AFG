@@ -35,15 +35,15 @@ public class Goals extends AppCompatActivity {
      * Opens the Goals activity
      * @param v - view
      */
-    public void openActivityGoalz(View v) {
-        openActivityGoals();
+    public void openActivityEntriez(View v) {
+        openActivityEntries();
     }
 
     /**
      * Opens the Goals activity
      */
-    public void openActivityGoals() {
-        Intent intent = new Intent(this, Goals.class);
+    public void openActivityEntries() {
+        Intent intent = new Intent(this, Entries.class);
         startActivity(intent);
     }
 
