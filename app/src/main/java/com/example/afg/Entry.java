@@ -13,7 +13,7 @@ public class Entry {
      * @param rate
      * @param feel
      */
-    public Entry (String time, int rate, String feel) {
+    public Entry (String feel, int rate, String time) {
         timeOfDay = time;
         rating = rate;
         feeling = feel;

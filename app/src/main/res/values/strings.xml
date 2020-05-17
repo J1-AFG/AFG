@@ -44,6 +44,7 @@
     <string name="SummaryText1Str">Text</string>
     <string name="EntryTextStr">Please select the emotion you are feeling right now.</string>
     <string name="entriesStr">Entries</string>
+    <string name="ratingEditTextHint">Enter a positive integer</string>
 
     <string name="timesDescStr1">The app will ask you to make an entry three times a day. Please provide a range of times to
     be notified in the morning, afternoon, and evening.</string>

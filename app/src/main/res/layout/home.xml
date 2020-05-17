@@ -8,9 +8,8 @@
 
     <TextView
         android:id="@+id/SummaryTextStr"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="50dp"
         android:layout_marginTop="75dp"
         android:text="@string/SummaryText1Str"
         android:textSize="36sp"
@@ -18,12 +17,12 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/homeTextStr"
+        android:id="@+id/entriesTextStr"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="85dp"
         android:layout_marginBottom="16dp"
-        android:text="@string/homeTextStr"
+        android:text="@string/entriesStr"
         android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toEndOf="@+id/chartsTextStr" />
@@ -75,13 +74,13 @@
         app:srcCompat="@android:drawable/btn_dialog" />
 
     <ImageButton
-        android:id="@+id/homeButton"
+        android:id="@+id/entriesButton"
         android:layout_width="100dp"
         android:layout_height="100dp"
 
-        android:contentDescription="@string/homeTextStr"
-        android:onClick="openActivityHomie"
-        app:layout_constraintBottom_toTopOf="@+id/homeTextStr"
+        android:contentDescription="@string/entriesStr"
+        android:onClick="openActivityEntriez"
+        app:layout_constraintBottom_toTopOf="@+id/entriesTextStr"
         app:layout_constraintEnd_toStartOf="@+id/goalsButton"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/chartsButton"
@@ -98,7 +97,7 @@
         app:layout_constraintBottom_toTopOf="@+id/goalsTextStr"
         app:layout_constraintEnd_toStartOf="@+id/settingsButton"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/homeButton"
+        app:layout_constraintStart_toEndOf="@+id/entriesButton"
         app:srcCompat="@android:drawable/btn_dialog" />
 
     <ImageButton
@@ -109,7 +108,7 @@
         android:contentDescription="@string/chartsTextStr"
         android:onClick="openActivityGraphz"
         app:layout_constraintBottom_toTopOf="@+id/chartsTextStr"
-        app:layout_constraintEnd_toStartOf="@+id/homeButton"
+        app:layout_constraintEnd_toStartOf="@+id/entriesButton"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:srcCompat="@android:drawable/btn_dialog" />

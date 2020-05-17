@@ -22,13 +22,12 @@
         android:id="@+id/next"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="100dp"
-        android:layout_marginEnd="100dp"
-        android:layout_marginBottom="40dp"
+        android:layout_marginBottom="50dp"
         android:onClick="openActivity"
         android:text="@string/continueStr"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent" />
 
     <RadioGroup
@@ -39,7 +38,7 @@
         android:layout_marginEnd="96dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/place" >
+        app:layout_constraintTop_toBottomOf="@+id/place">
 
         <RadioButton
             android:id="@+id/home"
@@ -48,8 +47,8 @@
             android:layout_marginStart="100dp"
             android:layout_marginEnd="100dp"
             android:layout_marginBottom="75dp"
-            android:textSize="18sp"
-            android:text="@string/homeStr" />
+            android:text="@string/homeStr"
+            android:textSize="18sp" />
 
         <RadioButton
             android:id="@+id/library"
@@ -58,8 +57,8 @@
             android:layout_marginStart="100dp"
             android:layout_marginEnd="100dp"
             android:layout_marginBottom="75dp"
-            android:textSize="18sp"
-            android:text="@string/libraryStr" />
+            android:text="@string/libraryStr"
+            android:textSize="18sp" />
 
         <RadioButton
             android:id="@+id/school"
@@ -68,8 +67,8 @@
             android:layout_marginStart="100dp"
             android:layout_marginEnd="100dp"
             android:layout_marginBottom="75dp"
-            android:textSize="18sp"
-            android:text="@string/schoolStr" />
+            android:text="@string/schoolStr"
+            android:textSize="18sp" />
 
         <RadioButton
             android:id="@+id/work"
@@ -78,8 +77,8 @@
             android:layout_marginStart="100dp"
             android:layout_marginEnd="100dp"
             android:layout_marginBottom="75dp"
-            android:textSize="18sp"
-            android:text="@string/workStr" />
+            android:text="@string/workStr"
+            android:textSize="18sp" />
 
         <RadioButton
             android:id="@+id/restaurant"
@@ -88,8 +87,8 @@
             android:layout_marginStart="100dp"
             android:layout_marginEnd="100dp"
             android:layout_marginBottom="75dp"
-            android:textSize="18sp"
-            android:text="@string/restaurantStr" />
+            android:text="@string/restaurantStr"
+            android:textSize="18sp" />
 
         <RadioButton
             android:id="@+id/other"
