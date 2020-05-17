@@ -32,7 +32,7 @@ public class Entries extends AppCompatActivity {
     private CheckBox otherBox;
     private EditText ratingEditText;
     private Spinner entriesSpinner;
-
+    private ArrayList<String> stringsArray = new ArrayList<String>();
     private ArrayList<String> entriesArray = new ArrayList<String>();
     private String dir;
     private String filename;
@@ -81,47 +81,63 @@ public class Entries extends AppCompatActivity {
         }
         entriesSpinner = (Spinner) findViewById(R.id.entriesDropdown);
         ArrayAdapter<String> entriesAdapter = new ArrayAdapter<String>(Entries.this,android.R.layout.simple_spinner_item, entriesArray);
-                //ArrayAdapter.createFromResource(this, R.array.entriesArray, android.R.layout.simple_spinner_item);
+
         entriesAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         entriesSpinner.setAdapter(entriesAdapter);
 
     }
 
     /**
-     * Runs the printToCSV method
+     * Runs the createStringsToWrite method
      * @param v - view
      * @throws IOException
      */
-    public void csv (View v) throws IOException {
-        printToCSV();
+    public void createStrings (View v) throws IOException {
+        createStringsToWrite();
     }
+    /**
+     * Adds a string to an ArrayList of strings that will be written to the CSV, and displays what was added in the Log (for debugging)
+     */
+    public void createStringsToWrite() {
+        String emotion = entriesSpinner.getSelectedItem().toString();
+
+        String rating = ratingEditText.getText().toString();
+        int rate = Integer.parseInt(rating);
+
+        Date today = new Date();
+        SimpleDateFormat format = new SimpleDateFormat("hh:mm:ss a");
+        String dateToStr = format.format(today);
+        Log.d("EntryInfo", emotion + ", " + rate + ", " + dateToStr);
+        stringsArray.add(emotion+","+rate+","+dateToStr+'\n');
+    }
+
     //CSV writer code retrieved from https://stackoverflow.com/
 
+
     /**
-     * Appends an entry to the entriesData CSV, and displays what was appended in the Log (for debugging)
+     * Appends each entry from the ArrayList of strings to the entriesData CSV
      * @throws IOException
      */
         public void printToCSV() throws IOException {
-            String emotion = entriesSpinner.getSelectedItem().toString();
 
-            String rating = ratingEditText.getText().toString();
-            int rate = Integer.parseInt(rating);
+         for (int i=0; i<stringsArray.size(); i++) {
+             FileWriter fw = new FileWriter(entriesData, true);
+             BufferedWriter bw = new BufferedWriter(fw);
+             bw.write(stringsArray.get(i));
+             bw.close();
 
-            Date today = new Date();
-            SimpleDateFormat format = new SimpleDateFormat("hh:mm:ss a");
-            String dateToStr = format.format(today);
-            Log.d("EntryInfo", emotion + ", " + rate + ", " + dateToStr);
-            FileWriter fw = new FileWriter(entriesData, true);
-            BufferedWriter bw = new BufferedWriter(fw);
-            bw.write(emotion+","+rate+","+dateToStr+'\n');
-            bw.close();
-
+         }
             }
 
 
-
-    public void openActivityHomie(View v) {
-        openActivityHome();
+    /**
+     * Runs the printToCSV method and opens the Home activity
+     * @param v
+     * @throws IOException
+     */
+    public void openActivityHomie(View v) throws IOException {
+            printToCSV();
+            openActivityHome();
     }
     public void openActivityHome() {
         Intent intent = new Intent(this, Home.class);
