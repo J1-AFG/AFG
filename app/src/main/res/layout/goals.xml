@@ -7,26 +7,26 @@
     android:layout_height="match_parent">
 
     <TextView
-        android:id="@+id/SummaryTextStr"
+        android:id="@+id/goalText5"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="104dp"
-        android:layout_marginBottom="596dp"
-        android:text="@string/goalsTextStr"
-        android:textSize="18sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/chartsTextStr" />
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="260dp"
+        android:text="@string/goals2Str"
+        android:textSize="30sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editGoal1" />
 
     <TextView
         android:id="@+id/homeTextStr"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="85dp"
+        android:layout_marginStart="75dp"
         android:layout_marginBottom="16dp"
         android:text="@string/homeTextStr"
         android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/chartsTextStr" />
+        app:layout_constraintStart_toEndOf="@+id/entryTextStr" />
 
     <TextView
         android:id="@+id/goalsTextStr"
@@ -51,10 +51,10 @@
         app:layout_constraintEnd_toEndOf="parent" />
 
     <TextView
-        android:id="@+id/chartsTextStr"
+        android:id="@+id/entryTextStr"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="69dp"
+        android:layout_marginStart="75dp"
         android:layout_marginBottom="16dp"
         android:text="@string/chartsTextStr"
         android:textSize="18sp"
@@ -105,9 +105,95 @@
         android:layout_marginBottom="16dp"
         android:contentDescription="@string/chartsTextStr"
         android:onClick="openActivityGraphz"
-        app:layout_constraintBottom_toTopOf="@+id/chartsTextStr"
+        app:layout_constraintBottom_toTopOf="@+id/entryTextStr"
         app:layout_constraintStart_toStartOf="parent"
         app:srcCompat="@android:drawable/btn_dialog" />
+
+    <TextView
+        android:id="@+id/goalText1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="41dp"
+        android:layout_marginTop="59dp"
+        android:text="@string/goals1Str"
+        android:textSize="30sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/goalText3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="320dp"
+        android:text="@string/goals1Str"
+        android:textSize="30sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/goalText2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:text="@string/goals2Str"
+        android:textSize="30sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editGoal1" />
+
+    <EditText
+        android:id="@+id/editGoal1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:ems="10"
+        android:hint="@string/goalsHint1Str"
+        android:inputType="textPersonName"
+        android:textSize="30sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/goalText1"
+        android:autofillHints="" />
+
+    <EditText
+        android:id="@+id/editGoal3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="260dp"
+        android:autofillHints=""
+        android:ems="10"
+        android:hint="@string/goalsHint1Str"
+        android:inputType="textPersonName"
+        android:textSize="30sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/goalText1" />
+
+    <EditText
+        android:id="@+id/editGoal4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="368dp"
+        android:autofillHints=""
+        android:ems="10"
+        android:hint="@string/goalsHint1Str"
+        android:inputType="textPersonName"
+        android:textSize="30sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/goalText1" />
+
+    <EditText
+        android:id="@+id/editGoal2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="38dp"
+        android:ems="10"
+        android:hint="@string/goalsHint2Str"
+        android:inputType="textPersonName"
+        android:textSize="30sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/goalText2"
+        android:autofillHints="" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
