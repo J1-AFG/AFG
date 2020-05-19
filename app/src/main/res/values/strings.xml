@@ -35,14 +35,14 @@
     <string name="goalsTextStr">Goals</string>
     <string name="settingsTextStr">Settings</string>
     <string name="chartsTextStr">Charts</string>
-    <string name="emotionsStr">Which emotions would you like to track?</string>
+    <string name="emotionsStr">Please enter which emotions you would like to track. The emotions you select will present as options in your daily entry logs. The emotions you do not select will not be options in your daily log. If you would like to make changes in what you selected go to system preferences. </string>
     <string name="happyStr">Happy</string>
     <string name="sadStr">Sad</string>
     <string name="angryStr">Angry</string>
     <string name="stressStr">Stress</string>
     <string name="graphsTextStr">Graphs</string>
     <string name="SummaryText1Str">Text</string>
-    <string name="EntryTextStr">Please select the emotion you are feeling right now.</string>
+    <string name="EntryTextStr">Please select the emotion you are feeling right now and rate the intensity of that emotion from 1-10. 10 being the most intense.</string>
     <string name="entriesStr">Entries</string>
     <string name="ratingEditTextHint">Enter a positive integer</string>
     <string name="goals1Str">I want</string>
@@ -51,7 +51,7 @@
     <string name="goalsHint2Str">Enter time of day</string>
 
     <string name="timesDescStr1">The app will ask you to make an entry three times a day. Please provide a range of times to
-    be notified in the morning, afternoon, and evening.</string>
+    be notified in the morning, afternoon, and evening. The app will take this range and divide into sections of morning, afternoon, and evening times. You will only be asked to make entries at times within this range.</string>
     <string name="addButtonStr">ADD</string>
 
     <string-array name="morningTimes">
